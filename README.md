@@ -16,9 +16,9 @@
 <!-- You can add more screenshots here if you like -->
 <img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
 
-List | Details | Details (Scrolled)
---- | --- | --- |
-![](https://github.com/Spikeysanju/Wiggles/blob/main/art/Home.png) | ![](https://github.com/Spikeysanju/Wiggles/blob/main/art/Details.png) | ![](https://github.com/Spikeysanju/Wiggles/blob/main/art/Details-Scrolled.png)
+List | Details | 
+--- | --- |
+![](https://github.com/rohitjakhar/PuppyAdoption/blob/main/results/screenshot_1.png) | ![](https://github.com/rohitjakhar/PuppyAdoption/blob/main/results/screenshot_2.png) |
 
 <br />
 
