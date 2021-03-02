@@ -5,12 +5,16 @@
 
 ## :scroll: Description
 <!--- Describe your app in one or two sentences -->
+Beautiful Puppy adoption app built to Demonstrate the Jetpack Compose UI for Android Dev Challenge *Made with love ❤️ by [Rohit Jakhr](https://github.com/rohitjakhar)*
 
+<br />
 
 ## :bulb: Motivation and Context
 <!--- Optionally point readers to interesting parts of your submission. -->
 <!--- What are you especially proud of? -->
-
+When I hear Jetpack Compose now in Beta Version, I was very excited to explore it. I watch many youtuber video and read lot of blog and it is amazing.
+Now I want to make my dirty hand on jetpack compose and I find this challenge through LinkedIn and I start doing this challenge.
+This Puppy Adoption App is very cool to explore to Jetpack Compose. I read many github repo on this project and start my own this project.
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
