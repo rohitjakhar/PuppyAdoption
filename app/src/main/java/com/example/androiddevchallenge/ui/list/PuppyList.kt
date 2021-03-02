@@ -48,12 +48,13 @@ fun PuppyList(viewModel: PuppyListViewModel, navController: NavController) {
     Surface(color = MaterialTheme.colors.background) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
-                text = "happy",
+                text = "Puppy Adoption",
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .height(48.dp)
-                    .padding(12.dp)
+                    .padding(12.dp),
+                style = MaterialTheme.typography.body1
             )
             LazyColumn(
                 content = {
@@ -68,7 +69,7 @@ fun PuppyList(viewModel: PuppyListViewModel, navController: NavController) {
                             elevation = 10.dp
                         ) {
                             Column {
-                                puppy.imageUrl?.let {
+                                puppy.imageUrl.let {
                                     CoilImage(
                                         data = it,
                                         contentDescription = null,
@@ -83,7 +84,7 @@ fun PuppyList(viewModel: PuppyListViewModel, navController: NavController) {
                                     modifier = Modifier.padding(start = 8.dp, end = 8.dp),
                                     fontWeight = FontWeight.SemiBold
                                 )
-                                puppy.breed?.let {
+                                puppy.breed.let {
                                     Text(
                                         it,
                                         style = MaterialTheme.typography.subtitle2,
