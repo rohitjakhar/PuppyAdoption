@@ -17,14 +17,24 @@ package com.example.androiddevchallenge.ui.details
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.* // ktlint-disable no-wildcard-imports
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.* // ktlint-disable no-wildcard-imports
+import androidx.compose.material.Button
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.sharp.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -36,6 +46,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.androiddevchallenge.component.InfoCard
 import dev.chrisbanes.accompanist.coil.CoilImage
 
 @ExperimentalFoundationApi
@@ -89,21 +100,29 @@ fun PuppyDetails(
                         )
                     }
                     Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = "Basic Info",
+                        modifier = Modifier
+                            .padding(8.dp)
+                            .height(32.dp),
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceEvenly
                     ) {
-                        Text(text = "🐶 " + puppy.breed)
-                        Text(text = "🎂 " + puppy.age)
+                        puppy.apply {
+                            InfoCard(title = "name", value = puppy.name)
+                            InfoCard(title = "age", value = puppy.age)
+                            InfoCard(title = "weight", value = puppy.weight)
+                        }
                     }
-                    puppy.story?.let { it1 ->
-                        Text(
-                            text = it1,
-                            fontSize = 18.sp,
-                            style = MaterialTheme.typography.body1,
-                            modifier = Modifier.padding(16.dp)
-                        )
-                    }
+                    Text(
+                        text = puppy.story,
+                        fontSize = 18.sp,
+                        style = MaterialTheme.typography.body1,
+                        modifier = Modifier.padding(16.dp)
+                    )
                     Spacer(modifier = Modifier.height(9.dp))
                     Button(
                         modifier = Modifier.fillMaxWidth(),

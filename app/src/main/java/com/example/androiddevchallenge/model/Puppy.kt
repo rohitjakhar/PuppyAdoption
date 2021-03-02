@@ -18,11 +18,11 @@ package com.example.androiddevchallenge.model
 data class Puppy(
     val id: String,
     val name: String,
-    val age: String?,
-    val story: String?,
-    val weight: String?,
+    val age: String,
+    val story: String,
+    val weight: String,
     val gender: String,
-    val breed: String?,
-    val imageUrl: String?,
-    val adoptUrl: String?
+    val breed: String,
+    val imageUrl: String,
+    val adoptUrl: String
 )
